@@ -12,6 +12,24 @@ Página estática (HTML + CSS, sin build) que reemplaza temporalmente geifem.com
 - `favicon.png`, `og-image.png` (1200x630).
 - SEO: `robots.txt`, `sitemap.xml`. Caché y cabeceras: `_headers` (Netlify y Cloudflare Pages).
 
+## Fotos y trabajos realizados
+
+- `img/colombia/`: fotos de Unsplash (uso comercial permitido, sin atribución obligatoria) en WebP, de ~40–110 KB. Se usan en el mosaico de clientes, en "Cuatro líneas de solución", en "El punto de partida" y en "Formación". Si se reemplazan, mantener contexto colombiano y el mismo recorte (3:2 o 4:3).
+- `trabajos.css` y `trabajos.js`: carrusel 3D de "Trabajos realizados" (Motion). Con JS carga `vendor/motion.mjs` solo cuando la sección está cerca; sin JS o con "reducir movimiento" queda una rejilla estática.
+- Los sectores del carrusel no llevan país, fechas ni años de relación, a propósito.
+
+## Pendiente: humanizar el sitio
+
+Ya hecho: fotos en soluciones, punto de partida, formación y clientes; textos más cercanos en punto de partida, metodología, planes y contacto; mensajes de WhatsApp en tono natural; hero con una foto de fondo muy sutil (`img/colombia/hero.webp`, calle de Salento, capa `.hero-photo` en `light.css`) y la línea "Hablamos contigo, no con un formulario".
+
+"Nosotros" ya tiene la foto del director general (`img/director.webp`) y una cita en primera persona del plural, tono corporativo y cercano (borrador: confirmar o reescribir). Si se suma más equipo, repetir el patrón `.dir-fig`.
+
+Anotado, falta material real del cliente:
+
+1. **Testimonios:** al menos una cita corta de un cliente real, aunque sin nombre completo. Debe ser una frase real, no inventada.
+2. **Contacto:** añadir nombre de quien responde, horario y tiempo de respuesta (hoy no se promete ninguno porque no están confirmados).
+3. **Microcopy:** repasar el resto de títulos y botones con tono directo ("te acompañamos", "tu equipo").
+
 ## Probar en local
 
 Hay que servir la carpeta por HTTP (en `file://` el logo de partículas cae a la imagen estática):

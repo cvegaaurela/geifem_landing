@@ -109,7 +109,7 @@
       nodes.forEach(function (b, i) { b.classList.toggle("on", i === idx); if (i === idx) b.setAttribute("aria-current", "true"); else b.removeAttribute("aria-current"); });
       var src = cards[idx].querySelector(".tr-body");
       panel.innerHTML = src.innerHTML;
-      var parts = [].slice.call(panel.querySelectorAll(".tr-sector,h3,.tr-sum,.tr-works li,.tr-meta,.tr-credit"));
+      var parts = [].slice.call(panel.querySelectorAll(".tr-sector,h3,.tr-sum,.tr-works li"));
       if (!first) {
         parts.forEach(function (p) { p.style.opacity = "0"; });
         animate(parts, { opacity: [0, 1], transform: ["translateY(18px)", "translateY(0px)"] }, { delay: stagger(0.055), duration: 0.65, ease: [0.22, 0.8, 0.24, 1] });
