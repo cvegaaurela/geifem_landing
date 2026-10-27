@@ -420,7 +420,7 @@ footer{position:relative;background:#00203f;color:var(--on-dark-muted);padding:6
 @media (min-width:900px){
   :root{--gutter:32px}
   section{padding:96px 0}
-  .nav{display:flex;gap:28px}
+  .nav{display:flex;gap:clamp(14px,1.8vw,28px)}
   .burger,.mnav{display:none!important}
   .sym .grid{grid-template-columns:repeat(4,1fr)}
   .pillars,.plans{grid-template-columns:repeat(3,1fr)}
@@ -448,9 +448,11 @@ footer{position:relative;background:#00203f;color:var(--on-dark-muted);padding:6
 <link rel="stylesheet" href="motion.css">
 <link rel="stylesheet" href="luxury.css">
 <link rel="stylesheet" href="light.css">
+<link rel="stylesheet" href="trabajos.css">
 <link rel="stylesheet" href="mobile.css">
 <script src="motion.js" defer></script>
 <script src="luxury.js" defer></script>
+<script type="module" src="trabajos.js"></script>
 </head>
 <body>
 <div class="curtain" aria-hidden="true">
@@ -477,6 +479,7 @@ footer{position:relative;background:#00203f;color:var(--on-dark-muted);padding:6
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="#soluciones">Soluciones</a>
+      <a href="#trabajos">Trabajos</a>
       <a href="#metodologia">Metodología</a>
       <a href="#planes">Planes</a>
       <a href="#contacto">Contacto</a>
@@ -493,6 +496,7 @@ footer{position:relative;background:#00203f;color:var(--on-dark-muted);padding:6
   </div>
   <nav class="mnav" id="mnav" aria-label="Menú móvil">
     <a href="#soluciones">Soluciones</a>
+    <a href="#trabajos">Trabajos</a>
     <a href="#metodologia">Metodología</a>
     <a href="#planes">Planes</a>
     <a href="#contacto">Contacto</a>
@@ -733,6 +737,106 @@ footer{position:relative;background:#00203f;color:var(--on-dark-muted);padding:6
       <span>Acompañamiento estratégico continuo</span>
       <span>Formación empresarial</span>
     </div>
+  </div>
+</section>
+
+<!-- 6b. TRABAJOS REALIZADOS (carrusel con Motion) -->
+<section class="alt trabajos" id="trabajos" aria-labelledby="trabajos-h">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">Trabajos realizados</p>
+      <h2 class="h2" id="trabajos-h">Experiencia real en el Caribe colombiano</h2>
+      <p class="lead">Seis sectores donde hemos puesto en orden la contabilidad, los impuestos y la información de la empresa. Por confidencialidad profesional no publicamos nombres de clientes.</p>
+    </div>
+  </div>
+  <div class="tr-stage" role="region" aria-roledescription="carrusel" aria-label="Trabajos realizados, por sector" tabindex="0">
+    <span class="tr-bignum" aria-hidden="true">01</span>
+    <ol class="tr-track">
+      <li class="tr-card" data-sector="Propiedad horizontal" data-short="Propiedad horizontal">
+        <div class="tr-hex"><div class="tr-hex-in"><img src="img/trabajos/propiedad-horizontal.webp" alt="Torres de apartamentos frente a la bahía y la marina de Cartagena, en el Caribe colombiano" width="880" height="880" loading="lazy" decoding="async" draggable="false"></div></div>
+        <div class="tr-body">
+          <p class="tr-sector">Propiedad horizontal</p>
+          <h3>Conjuntos y edificios residenciales</h3>
+          <p class="tr-sum">Información financiera ordenada para quien administra una copropiedad, mes a mes y al cierre del año.</p>
+          <ul class="tr-works"><li>Estados financieros anuales y conciliación de extractos bancarios</li><li>Estados de cuenta y facturación mensual</li><li>Planillas de empleados y seguridad social</li><li>Entrega formal de la información al cambio de administración</li></ul>
+          <p class="tr-meta"><span>Costa Caribe colombiana</span><span>2020 – 2021</span></p>
+          <p class="tr-credit">Foto: <a href="https://unsplash.com/@limamauro23?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Mauro Lima</a> / <a href="https://unsplash.com/?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
+        </div>
+      </li>
+      <li class="tr-card" data-sector="Alimentos y repostería" data-short="Alimentos">
+        <div class="tr-hex"><div class="tr-hex-in"><img src="img/trabajos/alimentos.webp" alt="Puesto de frutas en un mercado de Barranquilla, con naranjas, mangos y productos locales" width="880" height="880" loading="lazy" decoding="async" draggable="false"></div></div>
+        <div class="tr-body">
+          <p class="tr-sector">Alimentos y repostería</p>
+          <h3>Empresas de alimentos y repostería</h3>
+          <p class="tr-sum">Contabilidad e impuestos para una empresa de producción de alimentos, con las obligaciones al día y los resultados claros.</p>
+          <ul class="tr-works"><li>Estados de resultados mensuales y estados financieros</li><li>Retención en la fuente e impuesto al consumo</li><li>Regularización de obligaciones tributarias pendientes</li><li>Declaraciones y recibos de pago</li></ul>
+          <p class="tr-meta"><span>Costa Caribe colombiana</span><span>2019</span></p>
+          <p class="tr-credit">Foto: <a href="https://unsplash.com/@zanetb?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Zane Bolen</a> / <a href="https://unsplash.com/?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
+        </div>
+      </li>
+      <li class="tr-card" data-sector="Gastronomía" data-short="Gastronomía">
+        <div class="tr-hex"><div class="tr-hex-in"><img src="img/trabajos/gastronomia.webp" alt="Terraza de un restaurante en Cartagena con puerta azul y sillas de colores" width="880" height="880" loading="lazy" decoding="async" draggable="false"></div></div>
+        <div class="tr-body">
+          <p class="tr-sector">Gastronomía</p>
+          <h3>Restaurantes y gastronomía</h3>
+          <p class="tr-sum">Informes de gestión para la gerencia de un restaurante, con los resultados de cada periodo en un formato fácil de leer.</p>
+          <ul class="tr-works"><li>Informes de gestión periódicos para la gerencia</li><li>Resultados del periodo en un formato claro</li></ul>
+          <p class="tr-meta"><span>Costa Caribe colombiana</span><span>2019 – 2020</span></p>
+          <p class="tr-credit">Foto: <a href="https://unsplash.com/@alschim?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Alexander Schimmeck</a> / <a href="https://unsplash.com/?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
+        </div>
+      </li>
+      <li class="tr-card" data-sector="Consultoría y servicios profesionales" data-short="Consultoría">
+        <div class="tr-hex"><div class="tr-hex-in"><img src="img/trabajos/consultoria.webp" alt="Torres de oficinas de cristal en el sector empresarial de Barranquilla, Atlántico" width="880" height="880" loading="lazy" decoding="async" draggable="false"></div></div>
+        <div class="tr-body">
+          <p class="tr-sector">Consultoría y servicios profesionales</p>
+          <h3>Firmas de consultoría y capacitación</h3>
+          <p class="tr-sum">Acompañamiento contable y tributario permanente a una firma de servicios profesionales, durante más de cinco años.</p>
+          <ul class="tr-works"><li>Declaración de renta, con sus correcciones</li><li>IVA cuatrimestral</li><li>Facturación electrónica a sus propios clientes</li><li>Asesoría contable y tributaria permanente</li><li>Informes periódicos de gestión</li></ul>
+          <p class="tr-meta"><span>Costa Caribe colombiana</span><span>2020 – 2026</span></p>
+          <p class="tr-credit">Foto: <a href="https://unsplash.com/@aider22?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Aider Barrios</a> / <a href="https://unsplash.com/?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
+        </div>
+      </li>
+      <li class="tr-card" data-sector="Sociedades y asuntos corporativos" data-short="Sociedades">
+        <div class="tr-hex"><div class="tr-hex-in"><img src="img/trabajos/sociedades.webp" alt="Torre del Reloj y plaza del centro histórico de Cartagena de Indias" width="880" height="880" loading="lazy" decoding="async" draggable="false"></div></div>
+        <div class="tr-body">
+          <p class="tr-sector">Sociedades y asuntos corporativos</p>
+          <h3>Sociedades y asuntos corporativos</h3>
+          <p class="tr-sum">Documentos societarios listos para firmar, para que los cambios de socios y de representación queden en regla.</p>
+          <ul class="tr-works"><li>Actas de cesión de acciones y de cuotas</li><li>Cambio de representante legal</li><li>Estatutos y documentos de constitución de empresas</li></ul>
+          <p class="tr-meta"><span>Costa Caribe colombiana</span><span>2019 – 2021</span></p>
+          <p class="tr-credit">Foto: <a href="https://unsplash.com/@sarmiente?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Carlos Sarmiento</a> / <a href="https://unsplash.com/?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
+        </div>
+      </li>
+      <li class="tr-card" data-sector="Personas y familias" data-short="Personas">
+        <div class="tr-hex"><div class="tr-hex-in"><img src="img/trabajos/personas.webp" alt="Casas coloniales de colores con balcones y flores en una calle de Cartagena" width="880" height="880" loading="lazy" decoding="async" draggable="false"></div></div>
+        <div class="tr-body">
+          <p class="tr-sector">Personas y familias</p>
+          <h3>Personas naturales y familias</h3>
+          <p class="tr-sum">Declaraciones de renta y soportes para personas naturales, año tras año, sin sorpresas con la DIAN.</p>
+          <ul class="tr-works"><li>Declaraciones de renta de personas naturales</li><li>Certificados de ingresos y retenciones</li><li>RUT y documentación de soporte</li></ul>
+          <p class="tr-meta"><span>Costa Caribe colombiana</span><span>2013 – 2024</span></p>
+          <p class="tr-credit">Foto: <a href="https://unsplash.com/@rgaleriacom?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Ricardo Gomez Angel</a> / <a href="https://unsplash.com/?utm_source=geifem&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></p>
+        </div>
+      </li>
+    </ol>
+    <div class="tr-cursor" aria-hidden="true">Arrastrar</div>
+  </div>
+  <div class="wrap tr-below">
+    <div class="tr-bar">
+      <p class="tr-count" aria-live="off"><span class="tr-cur">01</span><span class="tr-sep"> / </span><span>06</span></p>
+      <p class="tr-hint">Arrastra, usa las flechas o toca un sector</p>
+      <div class="tr-ctrl">
+        <button class="tr-btn tr-prev" type="button" aria-label="Sector anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="tr-btn tr-play" type="button" aria-label="Pausar la reproducción automática" aria-pressed="false"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+        <button class="tr-btn tr-next" type="button" aria-label="Sector siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="tr-auto" aria-hidden="true"><i></i></div>
+    <div class="tr-route" aria-hidden="false">
+      <svg viewBox="0 0 1000 90" preserveAspectRatio="none" aria-hidden="true"><path class="tr-r-base" d="M10 46 C 130 6, 200 86, 330 46 S 520 6, 650 46 S 850 86, 990 46"/><path class="tr-r-fill" d="M10 46 C 130 6, 200 86, 330 46 S 520 6, 650 46 S 850 86, 990 46"/></svg>
+      <span class="tr-dot" aria-hidden="true"></span>
+    </div>
+    <div class="tr-panel" aria-live="polite"></div>
   </div>
 </section>
 
