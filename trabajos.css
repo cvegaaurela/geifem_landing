@@ -34,6 +34,10 @@
 .tr-live .tr-hex-in{inset:6px;z-index:1}
 .tr-live .tr-hex-in img{filter:saturate(calc(.55 + var(--act)*.45)) brightness(calc(.9 + var(--act)*.1));transform-origin:50% 50%;will-change:transform}
 .tr-live .tr-body{display:none}
+/* Nombre del sector sobre la imagen: lo primero que se lee */
+.tr-live .tr-hex-in::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,32,63,0) 38%,rgba(0,32,63,.78) 100%);pointer-events:none}
+.tr-tag{position:absolute;left:50%;bottom:17%;translate:-50% 0;z-index:2;width:62%;text-align:center;color:#fff;font-size:clamp(.78rem,calc(var(--cw,360px)*.05),1.05rem);font-weight:600;letter-spacing:.16em;line-height:1.35;text-transform:uppercase;text-shadow:0 2px 14px rgba(0,32,63,.55);pointer-events:none}
+.tr-tag::before{content:"";display:block;width:26px;height:2px;margin:0 auto 9px;background:var(--gold-l)}
 .tr-live .tr-bignum{display:block;position:absolute;left:50%;top:50%;translate:-50% -52%;font-size:clamp(11rem,34vw,24rem);font-weight:200;line-height:1;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:1.5px rgba(5,67,135,.16);pointer-events:none;z-index:0}
 .tr-live .tr-cursor{display:block;position:absolute;left:0;top:0;z-index:300;padding:9px 14px;border-radius:999px;background:var(--navy);color:#fff;font-size:.62rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;pointer-events:none;opacity:0;white-space:nowrap}
 .tr-live .tr-cursor.on{opacity:1}
@@ -95,3 +99,16 @@
   .tr-btn{width:42px;height:42px}
   .tr-live .tr-panel{min-height:0;margin-top:26px}
 }
+
+/* ---------- Negocios y gente de Colombia (mosaico de fotos) ---------- */
+.colgal{margin:46px 0 54px}
+.colgal .eyebrow{margin-bottom:18px}
+.colgal-grid{list-style:none;margin:0;padding:0;display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+.colgal-grid figure{position:relative;margin:0;overflow:hidden;border-radius:14px;aspect-ratio:4/3;background:var(--sky2);box-shadow:0 14px 34px rgba(0,48,91,.12)}
+.colgal-grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s var(--ease)}
+.colgal-grid figure:hover img{transform:scale(1.05)}
+.colgal-grid figcaption{position:absolute;inset:auto 0 0 0;display:grid;gap:2px;padding:34px 14px 11px;background:linear-gradient(180deg,rgba(0,32,63,0),rgba(0,32,63,.82));color:#fff}
+.colgal-grid figcaption b{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase}
+.colgal-grid figcaption a{font-size:.6rem;color:rgba(255,255,255,.72);text-decoration:none;letter-spacing:.04em}
+.colgal-grid figcaption a:hover,.colgal-grid figcaption a:focus-visible{color:#fff;text-decoration:underline}
+@media (min-width:900px){.colgal-grid{grid-template-columns:repeat(4,1fr);gap:18px}}

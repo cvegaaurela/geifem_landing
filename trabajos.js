@@ -35,6 +35,9 @@
       c.setAttribute("role", "group");
       c.setAttribute("aria-roledescription", "diapositiva");
       c.setAttribute("aria-label", (i + 1) + " de " + N + ": " + c.dataset.sector);
+      var tag = document.createElement("span");
+      tag.className = "tr-tag"; tag.setAttribute("aria-hidden", "true"); tag.textContent = c.dataset.sector;
+      c.querySelector(".tr-hex-in").appendChild(tag);
     });
 
     var pos = motionValue(0), spread = motionValue(0), routeP = motionValue(0);
