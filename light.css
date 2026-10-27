@@ -1,0 +1,229 @@
+/* GEIFEM · tema CLARO luxury (v2): blanco puro + azul y dorado de marca.
+   Se carga después de luxury.css. Paleta:
+   blanco #fff · azul marino #00305B · azul #054387 · hielo #eaf2fb · dorado #C19844 / #E6C887 / tinta dorada #8a6420 */
+
+:root{
+  --ink:#ffffff;
+  --paper:#00305B;
+  --text:#00305B;
+  --muted:rgba(0,48,91,.74);
+  --line:rgba(0,48,91,.12);
+  --gold-ink:#8a6420;
+  --sky:#eaf2fb;
+  --sky2:#dbe8f6;
+}
+html{overflow-x:clip}
+body{background:#fff;color:var(--paper);max-width:100%;overflow-x:clip}
+body::after{display:none}                        /* sin grano: blanco puro */
+::selection{background:var(--gold-l);color:var(--navy)}
+
+/* ---------- Fondo ---------- */
+.bgfx{background:linear-gradient(180deg,#ffffff 0%,#f3f8fd 100%)}
+.bgfx .o1{background:radial-gradient(circle,rgba(5,67,135,.14),transparent 65%)}
+.bgfx .o2{background:radial-gradient(circle,rgba(193,152,68,.12),transparent 65%)}
+.bgfx .o3{background:radial-gradient(circle,rgba(0,48,91,.09),transparent 65%)}
+.bgfx .grid{opacity:.07;filter:none}
+.alt{background:rgba(234,242,251,.6);border-block:1px solid var(--line)}
+.eyebrow,.dark .eyebrow{color:var(--gold-ink)}
+.rule{background:linear-gradient(90deg,var(--gold),var(--blue))}
+
+/* Secciones .dark → hielo azulado (hero y metodología) */
+.dark{color:var(--paper);--text:var(--paper);--muted:rgba(0,48,91,.74);--line:rgba(0,48,91,.12);--lg-a:#00305B;
+  background:linear-gradient(160deg,#ffffff 0%,#eaf2fb 55%,#dbe8f6 100%);background-size:100% 100%;animation:none}
+.dark::before{opacity:.4;filter:none}
+.dark .lead{color:var(--muted)}
+#metodologia.dark{background:linear-gradient(135deg,#eaf2fb 0%,#ffffff 50%,#eaf2fb 100%)}
+
+/* ---------- Cabecera ---------- */
+.top{background:rgba(255,255,255,.9);border-bottom:1px solid rgba(193,152,68,.38)}
+.top.scrolled{box-shadow:0 12px 40px rgba(0,48,91,.12)}
+.notice{background:linear-gradient(90deg,#00305B,#054387,#00305B);color:var(--gold-l);border-bottom:0;animation:none}
+.logo,.logo span{color:var(--navy)}
+.logo img{background:none;padding:0;border-radius:0;height:44px}
+.nav a,.mnav a{color:var(--navy)}
+.burger{color:var(--navy);background:transparent}
+
+/* ---------- Hero ---------- */
+.hero h1{color:var(--paper)}
+.hero .sub{color:var(--muted)}
+.hero::after{background:radial-gradient(circle,rgba(193,152,68,.2),transparent 62%)}
+.hero h1 em{color:var(--gold-ink)}
+.mo .hero h1 em .mi{background:linear-gradient(100deg,#8a6420 20%,#d4ac55 48%,#8a6420 74%);background-size:220% 100%;-webkit-background-clip:text;background-clip:text}
+.mo .hero>.glow{background:radial-gradient(520px circle at var(--gx,50%) var(--gy,40%),rgba(5,67,135,.12),transparent 62%)}
+.hlogo-wrap{filter:drop-shadow(0 26px 40px rgba(0,48,91,.22))}
+.hlogo-wrap::before{background:linear-gradient(145deg,#fff,#e3edf9)}
+.orbit .r82{stroke:var(--gold)}
+.orbit .r90{stroke:var(--blue);opacity:.5}
+.orbit .g96 path{stroke:var(--gold)}
+.orbit .g96 circle,.orbit .tr{fill:var(--gold)}
+.orbit .tr{filter:none}
+.orbit .pl{stroke:var(--blue)}
+.mo .hero>.scue{border-color:rgba(0,48,91,.4)}
+.scue span{background:var(--gold)}
+.mo-pre .curtain{background:#fff}
+.cv-a{stroke:var(--gold)}.cv-b{stroke:rgba(0,48,91,.5)}.cv-c{fill:var(--blue)!important}.cv-t{color:var(--navy)}
+
+/* ---------- Botones ---------- */
+.btn-gold{color:#04101d}
+.btn-ghost,.dark .btn-ghost{color:var(--navy);border-color:rgba(0,48,91,.45)}
+.btn-ghost:hover,.dark .btn-ghost:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn-dark{background:var(--navy);color:#fff;border-color:var(--navy)}
+.btn-dark:hover{background:var(--blue);border-color:var(--blue);box-shadow:0 14px 40px rgba(0,48,91,.28)}
+.nav a::after{background:var(--gold)}
+
+/* ---------- Tarjetas y bloques ---------- */
+.card,.item{background:#fff;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,48,91,.08)}
+.card:hover,.item:hover{background:#fff;border-color:rgba(193,152,68,.8);box-shadow:0 34px 80px rgba(0,48,91,.16)}
+.ico{color:var(--blue)}
+.ico-wrap{border-color:rgba(193,152,68,.65);background:rgba(234,242,251,.7)}
+.card:hover .ico-wrap{background:rgba(193,152,68,.18)}
+.step{background:#fff;border-color:var(--line);box-shadow:0 18px 44px rgba(0,48,91,.07)}
+.step:hover{background:#fff}
+.step b{color:var(--gold-ink)}
+.step h3{color:var(--navy)}
+.step p{color:var(--muted)}
+.sol .tag{color:var(--blue)}
+.sol li strong{color:var(--navy)}
+.sol li span{color:var(--muted)}
+.chip{color:var(--navy);border-color:rgba(0,48,91,.22);background:var(--sky)}
+.chip:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.res{background:rgba(193,152,68,.1)}
+.res b,.trans b{color:var(--gold-ink)}
+.trans{background:#fff}
+.tools h3{color:var(--blue);border-bottom-color:rgba(193,152,68,.55)}
+.tools li:hover{color:var(--navy)}
+.fig{box-shadow:0 30px 70px rgba(0,48,91,.16)}
+.fig img,.sol-img,.fig:hover img,.sol:hover .sol-img{filter:none}
+
+/* ---------- Planes: franja azul de marca ---------- */
+#planes.dark{--text:#fff;--muted:var(--on-dark-muted);--line:rgba(255,255,255,.18);color:#fff;
+  background:linear-gradient(135deg,#00305B 0%,#054387 55%,#00305B 100%);background-size:220% 220%;animation:sheen 20s ease-in-out infinite}
+#planes.dark::before{opacity:.14}
+#planes .eyebrow{color:var(--gold-l)}
+#planes .lead{color:var(--on-dark-muted)}
+#planes .card{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18);box-shadow:none}
+#planes .card:hover{background:rgba(255,255,255,.12);border-color:var(--gold)}
+#planes .plan h3{color:var(--gold-l)}
+#planes .plan .tag{color:var(--on-dark-muted)}
+#planes .plan li{color:#fff}
+#planes .plan li::before{border-color:var(--gold-l)}
+#planes .btn-ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+#planes .btn-ghost:hover{background:#fff;color:var(--navy);border-color:#fff}
+#planes .deco{stroke:var(--gold-l);opacity:.22}
+
+/* ---------- Banda ---------- */
+.mo .band{background:#fff}
+.mq-a .mq-set span{-webkit-text-stroke:1px rgba(0,48,91,.6)}
+.mq-a .mq-set span:nth-of-type(even){color:var(--blue)}
+.mq-b .mq-set span{color:var(--gold-ink)}
+.mq-b .mq-set i{background:var(--blue);opacity:.45}
+
+/* ---------- Decoraciones ---------- */
+.mo .deco{stroke:var(--gold);opacity:.35}
+.mo .step::before{background:linear-gradient(90deg,var(--blue),var(--gold))}
+.mo .step b{text-shadow:none}
+
+/* ---------- CTA final y pie en azul de marca ---------- */
+.final{background:radial-gradient(60% 90% at 50% 0%,rgba(230,200,135,.3),transparent 70%),linear-gradient(135deg,#00305B 0%,#054387 60%,#00305B 100%);color:#fff;border-top:0}
+.final::before{opacity:.1;filter:brightness(3)}
+.final h2{color:#fff}
+.final p{color:var(--on-dark-muted)}
+.final .btn-dark{background:var(--gold);color:#04101d;border-color:var(--gold)}
+.final .btn-dark:hover{background:var(--gold-l);border-color:var(--gold-l);box-shadow:0 14px 40px rgba(0,0,0,.3)}
+.final .mail{color:var(--gold-l)}
+.final .deco{stroke:var(--gold-l);opacity:.2}
+.mo .final .bh{--c:rgba(230,200,135,.5)}
+footer{background:#00203f;color:var(--on-dark-muted);border-top:1px solid rgba(193,152,68,.4)}
+.foot a{color:#fff}
+.foot a:hover{color:var(--gold-l)}
+.foot h4,.foot .slogan{color:var(--gold-l)}
+.foot .logo{color:#fff}
+.foot .logo img{background:#fff;padding:4px 6px;border-radius:10px;height:48px}
+.copy{border-top-color:rgba(255,255,255,.14)}
+.foot .btn{color:#04101d}
+.wa-float{box-shadow:0 0 0 3px #fff,0 12px 30px rgba(0,48,91,.35)}
+
+/* ---------- Escenas de partículas ---------- */
+.sc-n{color:var(--gold-ink)}
+.sc-n i{color:rgba(0,48,91,.4)}
+.sc h3,.sc-tag{color:var(--navy)}
+.sc-res{color:var(--muted)}
+.sc-link{color:var(--blue);border-bottom-color:rgba(5,67,135,.4)}
+.sc-link:hover{color:var(--gold-ink)}
+.scenes.live .sc-dots li{background:rgba(0,48,91,.2)}
+.scenes.live .sc-dots li.on{background:var(--gold)}
+.scenes.live .sc{transition:opacity .3s var(--ease),transform .3s var(--ease),filter .3s var(--ease)}
+.scenes.live .sc.active{transition:opacity .9s var(--ease) .32s,transform .9s var(--ease) .32s,filter .9s var(--ease) .32s}
+
+/* =====================================================================
+   AJUSTES v3
+   1) Sin tinte rosado: se eliminan los resplandores dorados translúcidos sobre blanco
+   2) Botones de contacto con fondo sólido y contraste alto
+   3) Grosores tipográficos más legibles
+   ===================================================================== */
+
+/* 1 · Fondos neutros (blanco + azul), el dorado queda solo en líneas, números y textos */
+.bgfx .o2{background:radial-gradient(circle,rgba(5,67,135,.08),transparent 65%)}
+.bgfx .fh{background:rgba(5,67,135,.06)!important}
+.hero::after{background:radial-gradient(circle,rgba(5,67,135,.10),transparent 62%)}
+.card::before{background:radial-gradient(360px circle at var(--mx,50%) var(--my,0%),rgba(5,67,135,.08),transparent 60%)}
+.res{background:var(--sky)}
+.ico-wrap{background:var(--sky)}
+.card:hover .ico-wrap{background:var(--sky2)}
+.dark::before{opacity:.09;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23054387' stroke-width='1.2'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='%23054387' stroke-width='1.2'/%3E%3C/svg%3E")}
+#planes.dark::before{opacity:.14;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='100'%3E%3Cpath d='M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100' fill='none' stroke='%23E6C887' stroke-width='1.2'/%3E%3Cpath d='M28 0L28 34L0 50L0 84L28 100L56 84L56 50L28 34' fill='none' stroke='%23E6C887' stroke-width='1.2'/%3E%3C/svg%3E")}
+.mo .deco{opacity:.28}
+
+/* 2 · Botones de contacto: sólidos y bien visibles */
+.btn-gold{background:linear-gradient(135deg,#054387 0%,#00305B 100%);color:#fff;border:1.5px solid #00305B;box-shadow:0 12px 28px rgba(0,48,91,.3)}
+.btn-gold svg{fill:var(--gold-l)}
+.btn-gold:hover{background:linear-gradient(135deg,#E6C887,#C19844);color:#04101d;border-color:#C19844;box-shadow:0 16px 36px rgba(0,48,91,.28)}
+.btn-gold:hover svg{fill:#04101d}
+.btn-ghost,.dark .btn-ghost{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+.btn-ghost:hover,.dark .btn-ghost:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+/* En las franjas azules (planes, CTA final, pie) el botón es dorado sólido */
+#planes .btn-ghost,.final .btn-dark,footer .btn-gold{background:linear-gradient(135deg,#E6C887 0%,#C19844 100%);color:#04101d;border:1.5px solid #E6C887;box-shadow:0 14px 32px rgba(0,0,0,.32)}
+#planes .btn-ghost svg,.final .btn-dark svg,footer .btn-gold svg{fill:#04101d}
+#planes .btn-ghost:hover,.final .btn-dark:hover,footer .btn-gold:hover{background:#fff;color:var(--navy);border-color:#fff}
+#planes .btn-ghost:hover svg,.final .btn-dark:hover svg,footer .btn-gold:hover svg{fill:var(--navy)}
+.wa-float{background:linear-gradient(135deg,#054387,#00305B);color:#fff;box-shadow:0 0 0 3px #fff,0 14px 34px rgba(0,48,91,.45)}
+.wa-float svg{fill:#fff}
+.wa-float::after{border-color:var(--gold)}
+
+/* 3 · Legibilidad: pesos más firmes (200→300 en titulares, 300→400 en textos) */
+:root{--muted:rgba(0,48,91,.84)}
+body{font-weight:400}
+h1,h2,h3,h4{font-weight:300}
+.h2{font-weight:300}
+.lead{font-weight:400}
+.eyebrow{font-weight:600}
+.card h3,.item h3{font-weight:500}
+.card p,.item p{font-weight:400}
+.step b{font-weight:300}
+.step h3{font-weight:500}
+.sol .num{font-weight:300}
+.sol h3{font-weight:400}
+.sol .tag{font-weight:500}
+.sol li strong{font-weight:600}
+.sol li span{font-weight:400}
+.plan h3{font-weight:300}
+.plan .tag{font-weight:400}
+.tools li{font-weight:400}
+.hero h1{font-weight:300}
+.hero h1 em{font-weight:500}
+.hero .sub{font-weight:400;color:var(--muted)}
+.btn{font-weight:600}
+.nav a{font-weight:500}
+.mq-a .mq-set span{font-weight:300;-webkit-text-stroke:1.2px rgba(0,48,91,.8)}
+.chip{font-weight:400}
+.res{font-weight:400}
+.sc h3{font-weight:300}
+.sc-tag{font-weight:400;opacity:1}
+.sc-res{font-weight:400}
+.sc-n{font-weight:600}
+.sc-link{font-weight:600}
+.final h2{font-weight:300}
+.final p{font-weight:400}
+.logo span{font-weight:400}
+.foot a,.copy,.foot .legal,.trans span{font-weight:400}
+.foot .slogan{font-weight:500}

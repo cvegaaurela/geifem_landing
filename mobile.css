@@ -1,0 +1,106 @@
+/* GEIFEM · optimización móvil. Se carga al final. Objetivo: proporciones correctas desde 320 px.
+   Reglas: tipografía fluida con topes bajos, espaciados de letra reducidos, sin 100vh (usa svh),
+   botones a ancho completo y elementos decorativos contenidos dentro de la pantalla. */
+
+@media (max-width:899px){
+  :root{--gutter:18px}
+  section{padding:56px 0}
+  .head{margin-bottom:28px}
+  .h2{font-size:clamp(1.7rem,7.4vw,2.4rem);max-width:none;line-height:1.12}
+  .lead{font-size:1rem}
+  .eyebrow{font-size:.64rem;letter-spacing:.22em;margin-bottom:10px}
+  .mo .eyebrow::before{width:0}
+  .mo .in .eyebrow::before,.mo .eyebrow.in::before{width:22px}
+}
+
+@media (max-width:639px){
+  body{font-size:.97rem;line-height:1.65}
+
+  /* Barra superior y cabecera compactas */
+  .notice{font-size:.58rem;letter-spacing:.1em;padding:6px 14px;line-height:1.4}
+  .bar{height:60px;gap:6px}
+  .top.scrolled .bar{height:54px}
+  .logo{gap:7px;min-width:0}
+  .logo img{height:34px}
+  .logo span{font-size:.92rem;letter-spacing:.2em}
+  .bar .btn-sm{min-height:38px;padding:6px 12px;font-size:.6rem;letter-spacing:.1em;gap:6px}
+  .bar .btn-sm svg{width:15px;height:15px}
+  .burger{width:40px;height:40px;border-radius:10px}
+
+  /* Hero */
+  .hero{min-height:auto;padding:36px 0 52px;display:block}
+  .hero-grid{gap:20px}
+  .hero h1{font-size:clamp(1.9rem,8.4vw,2.5rem);line-height:1.05}
+  .hero h1 em{font-size:clamp(2.7rem,12.6vw,3.6rem);line-height:1}
+  .mo .hero h1 em{padding-bottom:.22em}
+  .hero .sub{font-size:.98rem;line-height:1.7;margin-top:18px}
+  .cta-row{flex-direction:column;align-items:stretch;gap:10px;margin-top:24px}
+  .cta-row .btn{width:100%}
+  .btn{font-size:.66rem;letter-spacing:.12em;padding:12px 20px}
+  .btn-lg{min-height:52px;padding:12px 20px;font-size:.68rem}
+  .hero-art{margin-top:6px}
+  .mo .orbit{width:min(100vw,420px)}
+  .hlogo-wrap{width:min(62vw,250px)}
+
+  /* Banda en movimiento */
+  .mq-a .mq-set span{font-size:clamp(1.5rem,7.6vw,2.1rem)}
+  .mq-b .mq-set span{font-size:.62rem;letter-spacing:.16em;padding:0 .9em}
+  .mo .band{padding:18px 0 14px}
+
+  /* Escenas de partículas: svh evita el salto de la barra del navegador */
+  .scenes.live{height:420svh}
+  .scenes.live .scenes-stick{height:100svh}
+  .scenes.live .scenes-copy{padding-bottom:6svh}
+  .scenes.live .sc-list{height:260px}
+  .scenes.live .sc h3{font-size:clamp(1.7rem,7.8vw,2.3rem)}
+  .scenes.live .sc-tag{font-size:.95rem;margin-top:10px}
+  .scenes.live .sc-link{font-size:.62rem}
+  .scenes.live .sc-dots{right:10px}
+
+  /* Tarjetas y listas */
+  .card{padding:22px 18px}
+  .sol{padding:24px 18px}
+  .sol-img{width:calc(100% + 36px);margin:-24px -18px 18px}
+  .sol h3{font-size:1.3rem}
+  .sol .num{font-size:2.2rem}
+  .step{padding:22px 18px}
+  .step b{font-size:2.4rem;margin-bottom:8px}
+  .plan h3{font-size:1.8rem}
+  .ico-wrap{width:46px;height:46px;margin-bottom:14px}
+  .ico{width:24px;height:24px}
+  .chip{font-size:.74rem}
+  .res{padding:12px 14px;font-size:.92rem}
+  .trans{padding:16px 18px}
+  .fig{border-radius:8px}
+  .tools{gap:14px}
+
+  /* CTA y pie */
+  .final{padding:60px 0}
+  .final h2{font-size:clamp(2rem,9.4vw,2.8rem)}
+  .final p{font-size:1rem}
+  footer{padding:44px 0 96px}
+  .foot{gap:26px}
+  .foot .slogan{font-size:1.2rem}
+
+  /* Botón flotante más discreto */
+  .wa-float{right:14px;bottom:14px;height:52px;min-width:52px}
+  .wa-float svg{width:28px;height:28px}
+}
+
+@media (max-width:359px){
+  .logo span{display:none}
+  .hero h1 em{font-size:2.5rem}
+}
+
+/* Pantallas bajas (móvil horizontal): sin escenas fijas de 100 % de alto */
+@media (max-height:480px) and (orientation:landscape){
+  .hero{min-height:auto}
+  .scenes.live{height:360svh}
+}
+
+/* Escenas en móvil: el bloque de texto lleva un fondo blanco degradado para que las partículas nunca lo atraviesen */
+@media (max-width:899px){
+  .scenes.live .sc-list{width:100%}
+  .scenes.live .sc-list::before{content:"";position:absolute;left:-18px;right:-18px;top:-34px;bottom:-60px;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 40px)}
+  .scenes.live .sc h3{font-weight:300}
+}
