@@ -74,7 +74,7 @@
   var H = null, mx = -9999, my = -9999;
 
   function buildHero() {
-    var W = 150, Hh = Math.round(W * logoImg.naturalHeight / logoImg.naturalWidth);
+    var W = 180, Hh = Math.round(W * logoImg.naturalHeight / logoImg.naturalWidth);
     var oc = document.createElement("canvas"); oc.width = W; oc.height = Hh;
     var o = oc.getContext("2d", { willReadFrequently: true });
     o.drawImage(logoImg, 0, 0, W, Hh);
@@ -87,10 +87,10 @@
     if (total < 200) return;                      // imagen sin datos útiles: se queda el logo estático
     var n = small ? 2600 : 7000, buckets = [[], [], []];
     for (var p = 0; p < n; p++) {
-      var j = ((Math.random() * total) | 0) * 5, r = px[j + 2], g = px[j + 3], b = px[j + 4];
+      var j = Math.floor(p * total / n) * 5, r = px[j + 2], g = px[j + 3], b = px[j + 4];
       var lum = 0.3 * r + 0.59 * g + 0.11 * b;
       var cls = (r > b + 25 && r > 120) ? 0 : (lum < 75 ? 1 : 2);
-      buckets[cls].push([px[j] + Math.random() - 0.5, px[j + 1] + Math.random() - 0.5]);
+      buckets[cls].push([px[j] + (Math.random() - 0.5) * 0.7, px[j + 1] + (Math.random() - 0.5) * 0.7]);
     }
     var sys = new System(heroCv, n), idx = 0, ends = 0;
     sys.size = small ? 1.7 : 2.2; sys.R = small ? 70 : 120; sys.F = 5.6; sys.k = 0.045;

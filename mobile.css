@@ -48,7 +48,7 @@
   .mo .band{padding:18px 0 14px}
 
   /* Escenas de partículas: svh evita el salto de la barra del navegador */
-  .scenes.live{height:420svh}
+  .scenes.live{height:250svh}
   .scenes.live .scenes-stick{height:100svh}
   .scenes.live .scenes-copy{padding-bottom:6svh}
   .scenes.live .sc-list{height:260px}
@@ -95,7 +95,7 @@
 /* Pantallas bajas (móvil horizontal): sin escenas fijas de 100 % de alto */
 @media (max-height:480px) and (orientation:landscape){
   .hero{min-height:auto}
-  .scenes.live{height:360svh}
+  .scenes.live{height:230svh}
 }
 
 /* Escenas en móvil: el bloque de texto lleva un fondo blanco degradado para que las partículas nunca lo atraviesen */
@@ -103,4 +103,11 @@
   .scenes.live .sc-list{width:100%}
   .scenes.live .sc-list::before{content:"";position:absolute;left:-18px;right:-18px;top:-34px;bottom:-60px;background:linear-gradient(to bottom,rgba(255,255,255,0),#fff 40px)}
   .scenes.live .sc h3{font-weight:300}
+}
+
+@media (max-width:639px){
+  .hero .sub strong{font-size:1.12rem;margin-bottom:10px}
+  .hero .sub span{font-size:.92rem}
+  .sub-head{margin-top:44px}
+  .sub-head .h2{font-size:clamp(1.35rem,6.4vw,1.8rem)}
 }

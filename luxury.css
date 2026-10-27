@@ -148,7 +148,7 @@ footer{background:#02070d;border-top:1px solid var(--line)}
 .sc-link{display:inline-flex;align-items:center;gap:12px;margin-top:26px;color:var(--gold-l);text-decoration:none;font-size:.7rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid rgba(230,200,135,.4);padding-bottom:6px;transition:gap .35s var(--ease),color .3s}
 .sc-link:hover{gap:20px;color:#fff}
 
-.scenes.live{height:440vh}
+.scenes.live{height:260vh}
 .scenes.live .scenes-stick{position:sticky;top:0;height:100vh;padding:0;overflow:hidden}
 .scenes.live .scenes-cv{display:block;position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .scenes.live .scenes-copy{position:absolute;inset:0;display:flex;align-items:center;margin:0 auto;pointer-events:none}

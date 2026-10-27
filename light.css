@@ -227,3 +227,10 @@ h1,h2,h3,h4{font-weight:300}
 .logo span{font-weight:400}
 .foot a,.copy,.foot .legal,.trans span{font-weight:400}
 .foot .slogan{font-weight:500}
+
+/* AJUSTES v4 · claridad */
+.hero .sub{max-width:52ch;color:var(--muted)}
+.hero .sub strong{display:block;font-size:clamp(1.15rem,2.2vw,1.45rem);font-weight:500;line-height:1.45;color:var(--navy);margin-bottom:12px}
+.hero .sub span{display:block;font-size:.98rem;line-height:1.7}
+.sub-head{margin-top:76px}
+.sub-head .h2{font-size:clamp(1.5rem,3.4vw,2.3rem)}
